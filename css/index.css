@@ -1,3 +1,116 @@
-#About {
-    background-color: #53599A;
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Navegation {
+    margin: 20px
+}
+
+.Navegation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu li a {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+}
+
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to left, #FFC3B8, #D02001);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.Navegation li a:hover::after {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#About,
+#Contact,
+#Projects {
+    padding: 50px;
+    height: 500px;
+    justify-content: center
+}
+
+#About,
+#Contact {
+    background-color: #FE5E41;
+}
+
+#About h2{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+#About p {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.form-box {
+    width: 500px;
+    padding: 20px;
+}
+
+.contact_form{
+   display: grid;
+   gap: 20px;
+   justify-items: center;
+}
+
+.contact_form input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 30px;
+    width: 400px;
+    padding: 10px;
+
+}
+
+.contact_form div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15px
+}
+
+#Contact h2 {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.my-data {
+    height: 200px;
+    width: 200px;
+    background-color: #FFC3B8;
 }

@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Daniel Mendoza</h1>
-        <nav>
-            <ul>
+        <nav class="Navegation">
+            <h2>Daniel Mendoza</h2>
+            <ul class="menu">
                 <li><a href="#About">About me</a></li>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
@@ -20,24 +25,35 @@
         </nav>
     </header>
     <section id="About">
-        <p>I am a systems engineer focused on software development.
-            I am currently strengthening my technical skills through my training at RIWI, building a solid foundation in
-            the construction, architecture, and implementation of technological solutions.
-            I am interested in developing software for the medical and healthcare fields, as well as creating solutions
-            that address real needs and generate an impact in the tech sector.</p>
+        <div>
+            <h2>About me</h2>
+            <p>I am a systems engineer focused on software development.
+                I am currently strengthening my technical skills through my training at RIWI, building a solid
+                foundation in
+                the construction, architecture, and implementation of technological solutions.
+                I am interested in developing software for the medical and healthcare fields, as well as creating
+                solutions
+                that address real needs and generate an impact in the tech sector.</p>
+        </div>
+
     </section>
     <section id="Projects"></section>
     <section id="Contact">
-        <form action="">
-            <label for="Name"></label>
-            <input type="text" id="Name">
-            <label for="Last_Name"></label>
-            <input type="text" id="Last_Name">
-            <label for="Email"></label>
-            <input type="text" id="Email">
-            <label for="Phone_Number"></label>
-            <input type="text" id="Phone_Number">
-        </form>
+        <h2>Schedule Contact</h2>
+        <div class="form-box">
+            <form action="" class="contact_form">
+                <div>
+                    <input type="text" id="Name" placeholder="Name">
+                    <input type="text" id="Last_Name" , placeholder="Last Name">
+                    <input type="email" id="Email" placeholder="Email">
+                    <input type="number" id="Phone_Number" placeholder="Phone Number">
+                </div>
+                    <input type="text" placeholder="Write the message...">
+            </form>
+        </div>
+        <div class="my-data">
+
+        </div>
     </section>
 </body>
 
