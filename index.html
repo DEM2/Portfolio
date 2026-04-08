@@ -8,27 +8,25 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav class="Navegation">
-            <h2>Daniel Mendoza</h2>
+        <nav>
             <ul class="menu">
                 <li><a href="#About">About me</a></li>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
+        <h1>Daniel <span>System Engineer</span> <br>Mendoza</h1>
     </header>
     <section id="About">
         <div>
             <h2>About me</h2>
-            <p>I am a systems engineer focused on software development.
-                I am currently strengthening my technical skills through my training at RIWI, building a solid
+            <p> I am currently strengthening my technical skills through my training at RIWI, building a solid
                 foundation in
                 the construction, architecture, and implementation of technological solutions.
                 I am interested in developing software for the medical and healthcare fields, as well as creating
@@ -39,21 +37,37 @@
     </section>
     <section id="Projects"></section>
     <section id="Contact">
-        <h2>Schedule Contact</h2>
-        <div class="form-box">
-            <form action="" class="contact_form">
-                <div>
-                    <input type="text" id="Name" placeholder="Name">
-                    <input type="text" id="Last_Name" , placeholder="Last Name">
-                    <input type="email" id="Email" placeholder="Email">
-                    <input type="number" id="Phone_Number" placeholder="Phone Number">
+
+        <div class="glass-card">
+            <h2>Schedule contact</h2>
+            <form class="form-grid" action="">
+                <div class="field">
+                    <label>Name</label>
+                    <input type="text" placeholder="Juan" />
                 </div>
-                    <input type="text" placeholder="Write the message...">
+                <div class="field">
+                    <label>Last name</label>
+                    <input type="text" placeholder="García" />
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" placeholder="juan@email.com" />
+                </div>
+                <div class="field">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+57 300 000 0000" />
+                </div>
+                <div class="field full">
+                    <label>Message</label>
+                    <textarea placeholder="Write your message..."></textarea>
+                </div>
+                <div class="form-actions full">
+                    <button type="button" class="btn-cancel">Cancel</button>
+                    <button type="submit" class="btn-reserve">Send message</button>
+                </div>
             </form>
         </div>
-        <div class="my-data">
 
-        </div>
     </section>
 </body>
 
