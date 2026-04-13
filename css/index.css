@@ -1,40 +1,69 @@
-body {
-    font-family: "Open Sans", sans-serif;
+:root {
+    --font-heading: 'David Libre', ui-serif, Georgia, serif;
+    --font-body: 'Chivo', system-ui, -apple-system, sans-serif;
+
+    --background: #191225;
+    --secondBackground:#3d2f52;
+    --secondColor: #a891e8;
+    --thirdColor: #e7e4fb;
+    --fourthColor: #8c5bd0;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
-    background-color: #191225;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--thirdColor);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background);
 }
 
 a {
     text-decoration: none;
 }
 
+
 /*header designs*/
 
-header {
-    display: flex;
-    flex-direction: column;
-    height: 600px;
+.main-section {
+    height: 37.5rem;
 }
 
-header h1 {
-    font-size: 90px;
+.main-section h1 {
+    font-size: 5rem;
     font-weight: 300;
     width: 600px;
-    color: #E5E7EB;
     transform: translate(10%, 35%);
 }
 
-header h1 span {
-    font-size:40px ;
+h1 span {
+    font-size: 5.5rem;
+    color: #a891e8;
 }
 
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin: 20px
-
+    justify-content: center;
+    padding: 1rem;
 }
 
 .menu {
@@ -75,23 +104,32 @@ Nav li a:hover::after {
     justify-content: center
 }
 
+#About {
+    background-color: var(--secondBackground);
+    display: flex;
+    justify-content: space-around;
+}
 
-#About h2{
-    color:#E5E7EB;
-    font-size: 50px;
+#About h3 {
+    color: var(--fourthColor);
+    font-size: 1.5rem;
     font-weight: 300;
-    width: 250px;
-    transform: translate(250px, 10px);
+    width: 15rem;
+    margin-bottom: 2rem;
+}
+
+#About h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    width: 20rem;
+    margin-bottom: 2rem;
 }
 
 #About p {
-    margin: 0;
     color: #E5E7EB;
-    font-size: 27px;
-    font-weight: 300;
-    width: 720px;
-    transform: translate(450px, 10px);
-    left: 60px;
+    font-size: 1.1rem;
+    font-weight: 100;
+    width: 40rem;
 }
 
 
@@ -104,7 +142,7 @@ Nav li a:hover::after {
     padding: 2.5rem;
     width: 100%;
     max-width: 560px;
-   
+
 }
 
 .glass-card h2 {
