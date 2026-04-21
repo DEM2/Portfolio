@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #07060F;
+  --purple: #8A5CF6;
+  --purple2: #A78BFA;
+  --purple3: #C4B5FD;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--bg);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+header h2 {
+  color: whitesmoke;
+}
+header .menu {
+  display: flex;
+  gap: 20px;
+  font-size: 1.3em;
+}
+header .menu li a {
+  color: var(--purple2);
+  transition: color 0.2s;
+  position: relative;
+}
+header .menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+header .menu li a:hover {
+  color: whitesmoke;
+}
+header .menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+.main-section {
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.main-section--info {
+  width: 60%;
+}
+.main-section--info h1 {
+  font-size: 5rem;
+  color: whitesmoke;
+}
+.main-section--info h1 span {
+  background: linear-gradient(135deg, var(--purple2), var(--purple3), pink);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+}
+.main-section--info p {
+  color: gray;
+  font-size: 1.5rem;
+}
+.main-section .availability-tag {
+  background: rgba(138, 92, 246, 0.12);
+  width: 10rem;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  border: 0.5px solid var(--purple);
+  gap: 8px;
+}
+.main-section .availability-tag span {
+  color: whitesmoke;
+}
+.main-section .availability-tag::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: greenyellow;
+}
+.main-section .img-container {
+  background-color: aliceblue;
+  width: 30%;
+  height: 25rem;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.main-section .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
