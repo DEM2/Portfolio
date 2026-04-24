@@ -16,9 +16,10 @@
         <h2>DEMC</h2>
         <nav>
             <ul class="menu">
-                <li><a href="#About">About me</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#About">Sobre MI</a></li>
+                <li><a href="#Projects">proyectos</a></li>
+                <li><a href="#Contact">Contacto</a></li>
+                <li><a href="./pets.html">Mascotas</a></li>
             </ul>
         </nav>
     </header>
@@ -29,12 +30,69 @@
             <p>Systems Engineer</p>
             <p></p>
         </div>
-        
     </section>
-    <section>
+    <section id="About" class="AboutMe">
+        <span>Sobre mi</span>
+        <h2>"La tecnología debe estar al servicio <br> de algo más importante que ella misma"</h2>
+        <div>
+            <article class="description">
+                <p>Soy ingeniero de sistemas enfocado en el desarrollo de software y la creación de soluciones
+                    tecnológicas
+                    con impacto. Actualmente fortalezco mis competencias en arquitectura, construcción e implementación
+                    de
+                    software a través de mi formación en RIWI.
 
+                    Mi principal interés es aplicar la tecnología en el sector salud, con el objetivo de especializarme
+                    en
+                    ingeniería biomédica y contribuir al desarrollo de soluciones que mejoren la calidad de vida de las
+                    personas.</p>
+            </article>
+            <article class="data">
+                <div></div>
+                <div></div>
+            </article>
+        </div>
     </section>
-
+    <section id="Projects" class="Projects">
+        <span>Portafolio</span>
+        <h2>Lo que he construido</h2>
+        <p>Una selección de proyectos que muestran mi proceso creativo y habilidades técnicas.</p>
+        <div class="grid" id="Projects-container"></div>
+    </section>
+    <section class="Contact" id="Contact">
+        <div class="Contact-tl">
+            <span>contacto</span>
+            <h2>Construyamos algo limpio, útil y bien hecho.</h2>
+        </div>
+        <div class="glass-card">
+            <form class="form-grid" action="">
+                <div class="field">
+                    <label>Name</label>
+                    <input type="text" placeholder="Daniel" />
+                </div>
+                <div class="field">
+                    <label>Last name</label>
+                    <input type="text" placeholder="Mendoza" />
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" placeholder="dm@email.com" />
+                </div>
+                <div class="field">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+57 300 000 0000" />
+                </div>
+                <div class="field full">
+                    <label>Message</label>
+                    <textarea placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+                <div class="form-actions full">
+                    <button type="submit" class="btn-reserve">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="./cards-ptf.js"></script>
 </body>
 
 </html>
