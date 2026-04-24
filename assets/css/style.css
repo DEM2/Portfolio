@@ -36,6 +36,19 @@ header {
 header h2 {
   color: whitesmoke;
 }
+header #bMenu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+header #bMenu span {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 20px;
+  height: 4px;
+  transition: all 300ms ease-out;
+}
 header .menu {
   display: flex;
   gap: 20px;
@@ -61,6 +74,50 @@ header .menu li a:hover {
 }
 header .menu li a:hover::after {
   transform: scaleX(1);
+}
+@media (max-width: 597px) {
+  header {
+    overflow: hidden;
+  }
+  header #bMenu {
+    display: flex;
+    width: 20px;
+    position: static;
+    z-index: 20;
+    right: 0;
+  }
+  header .bttActive span:first-child {
+    transform: translate(0px, 13px) rotate(47deg);
+  }
+  header .bttActive span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
+  header .bttActive span:last-child {
+    transform: translate(0px, -16px) rotate(-47deg);
+  }
+  header nav {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: start;
+    padding-top: 2rem;
+    top: 0px;
+    right: -100%;
+    width: 18rem;
+    height: 100dvh;
+    background: rgba(7, 6, 15, 0.6352941176);
+    backdrop-filter: blur(18px);
+    transition: all 0.6s ease-in-out;
+  }
+  header nav.active {
+    right: 0px;
+  }
+  header .menu {
+    margin-top: 92px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .main-section {
@@ -134,17 +191,48 @@ header .menu li a:hover::after {
 .AboutMe h2 {
   color: #f5f2ff;
   font-size: 2.5rem;
-  text-transform: inherit;
+  font-weight: 300;
+  font-style: italic;
 }
 .AboutMe p {
-  color: gray;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+.AboutMe-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.AboutMe .data {
+  border: 0.5px solid #aaa3bf;
+  border-radius: 24px;
+  padding: 20px;
+  width: 40%;
+}
+.AboutMe .data .item {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex-direction: column;
+  border-bottom: 0.5px solid #94929a;
+}
+.AboutMe .data .item span {
+  color: #f5f2ff;
+}
+.AboutMe .data .item span:first-child {
+  color: var(--purple3);
+}
+.AboutMe .data .item span:nth-child(2) {
   font-size: 1rem;
 }
 .AboutMe .description {
-  padding: 28px;
   width: 50%;
-  border: 0.5px solid #aaa3bf;
-  border-radius: 24px;
+}
+@media (max-width: 497px) {
+  .AboutMe .description {
+    width: 100%;
+  }
 }
 
 .Projects {
@@ -171,7 +259,7 @@ header .menu li a:hover::after {
   gap: 20px;
 }
 .Projects .grid .card {
-  width: 320px;
+  width: 400px;
   background: #111118;
   border: 0.5px solid rgba(255, 255, 255, 0.07);
   border-radius: 22px;
@@ -184,10 +272,12 @@ header .menu li a:hover::after {
   aspect-ratio: 16/10;
   overflow: hidden;
   position: relative;
+  padding: 1rem;
 }
 .Projects .grid .card-header img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   object-fit: cover;
   display: block;
 }
@@ -207,11 +297,20 @@ header .menu li a:hover::after {
   color: whitesmoke;
   font-size: 0.73rem;
 }
+.Projects .grid .card-body .boton {
+  background-color: #aaa3bf;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50%;
+}
 
 .Contact {
   display: flex;
   justify-content: space-between;
   padding: 4rem;
+}
+.Contact-tl {
+  width: 50%;
 }
 .Contact-tl h2 {
   font-size: 4rem;
@@ -221,13 +320,28 @@ header .menu li a:hover::after {
   font-size: 1.5rem;
   color: var(--purple3);
 }
+@media (max-width: 497px) {
+  .Contact {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .Contact .glass-card {
+    width: 100%;
+  }
+  .Contact-tl {
+    width: 100%;
+  }
+  .Contact-tl h2 {
+    font-size: 2rem;
+  }
+}
 
 .glass-card {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   padding: 2.5rem;
-  width: 100%;
+  width: 50%;
   max-width: 560px;
 }
 .glass-card .form-grid {

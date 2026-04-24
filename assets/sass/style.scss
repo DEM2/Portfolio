@@ -21,6 +21,7 @@ body {
         radial-gradient(circle at top left, rgba(196, 181, 253, 0.08), transparent 22%),
         var(--bg);
     ;
+    
 }
 
 a {
@@ -38,6 +39,21 @@ header {
 
     h2 {
         color: whitesmoke;
+    }
+
+     #bMenu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 5px;
+
+        span {
+            background-color: #fff;
+            border-radius: 5px;
+            width: 20px;
+            height: 4px;
+            transition: all 300ms ease-out;
+        }
     }
 
     .menu {
@@ -72,6 +88,63 @@ header {
             }
         }
     }
+
+
+     @media (max-width: 597px) {
+      
+        overflow: hidden;
+
+        #bMenu {
+            display: flex;
+            width: 20px;
+            position: static;
+            z-index: 20;
+            right: 0;
+        }
+
+        .bttActive {
+            span {
+                &:first-child {
+                    transform: translate(0px, 13px) rotate(47deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    width: 0;
+                }
+
+                &:last-child {
+                    transform: translate(0px, -16px) rotate(-47deg);
+                }
+            }
+        }
+
+        nav {
+            display: flex;
+            position: fixed;
+            justify-content: center;
+            align-items: start;
+            padding-top: 2rem;
+            top: 0px;
+            right: -100%;
+            width: 18rem;
+            height: 100dvh;
+            background:#07060fa2;
+            backdrop-filter: blur(18px);
+            transition: all .6s ease-in-out;
+
+            &.active {
+                right: 0px;
+            }
+        }
+
+        .menu {
+            margin-top: 92px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
 
 }
 
@@ -158,19 +231,54 @@ header {
     h2{
         color: #f5f2ff;
         font-size: 2.5rem;
-        text-transform: inherit;
+        font-weight: 300;
+        font-style: italic;
     }
 
     p{
-        color: gray;
-        font-size: 1rem;
+        color:whitesmoke;
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+
+    &-info{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .data{
+        border: .5px solid #aaa3bf;
+        border-radius: 24px;
+        padding: 20px;
+        width: 40%;
+        .item{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            flex-direction: column;
+            border-bottom: 0.5px solid #94929a;
+            span{
+                color: #f5f2ff;
+                &:first-child{
+                    color: var(--purple3);
+                }
+                &:nth-child(2){
+                    font-size: 1rem ;
+                }
+            }
+        }
     }
 
     .description{
-        padding: 28px;
         width: 50%;
-        border: .5px solid #aaa3bf;
-        border-radius: 24px;
+    }
+
+    @media (max-width:497px) {
+        .description{
+            width: 100%;
+        }
+        
     }
 }
 
@@ -201,7 +309,7 @@ header {
         gap: 20px;
 
         .card {
-            width: 320px;
+            width: 400px;
             background: #111118;
             border: .5px solid rgba(255, 255, 255, 0.07);
             border-radius: 22px;
@@ -214,10 +322,12 @@ header {
                 aspect-ratio: 16/10;
                 overflow: hidden;
                 position: relative;
+                padding: 1rem;
 
                 img {
                     width: 100%;
                     height: 100%;
+                    border-radius: 10px ;
                     object-fit: cover;
                     display: block;
 
@@ -243,6 +353,13 @@ header {
                         font-size: 0.73rem;
                     }
                 }
+
+                .boton{
+                    background-color: #aaa3bf;
+                    display: inline-flex;
+                    align-items: center;
+                    border-radius: 50%;
+                }
             }
 
 
@@ -259,6 +376,7 @@ header {
     padding: 4rem;
 
     &-tl {
+        width: 50%;
         h2 {
             font-size: 4rem;
             color: whitesmoke;
@@ -271,6 +389,21 @@ header {
 
         ;
     }
+
+    @media (max-width: 497px) {
+        flex-direction: column;
+        gap:20px;
+        .glass-card{
+            width: 100%;
+        }
+
+        &-tl {
+            width: 100%;
+            h2{
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
 .glass-card {
@@ -278,7 +411,7 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     padding: 2.5rem;
-    width: 100%;
+    width: 50%;
     max-width: 560px;
 
     .form-grid {

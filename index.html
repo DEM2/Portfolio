@@ -14,10 +14,15 @@
 <body>
     <header>
         <h2>DEMC</h2>
-        <nav>
+        <div id="bMenu" onclick="showMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menuMobile">
             <ul class="menu">
                 <li><a href="#About">Sobre MI</a></li>
-                <li><a href="#Projects">proyectos</a></li>
+                <li><a href="#Projects">Proyectos</a></li>
                 <li><a href="#Contact">Contacto</a></li>
                 <li><a href="./pets.html">Mascotas</a></li>
             </ul>
@@ -34,7 +39,7 @@
     <section id="About" class="AboutMe">
         <span>Sobre mi</span>
         <h2>"La tecnología debe estar al servicio <br> de algo más importante que ella misma"</h2>
-        <div>
+        <div class="AboutMe-info">
             <article class="description">
                 <p>Soy ingeniero de sistemas enfocado en el desarrollo de software y la creación de soluciones
                     tecnológicas
@@ -46,10 +51,6 @@
                     en
                     ingeniería biomédica y contribuir al desarrollo de soluciones que mejoren la calidad de vida de las
                     personas.</p>
-            </article>
-            <article class="data">
-                <div></div>
-                <div></div>
             </article>
         </div>
     </section>
@@ -93,6 +94,7 @@
         </div>
     </section>
     <script src="./cards-ptf.js"></script>
+    <script src="./showMenu.js"></script>
 </body>
 
 </html>
