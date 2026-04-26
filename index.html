@@ -8,93 +8,131 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h2>DEMC</h2>
-        <div id="bMenu" onclick="showMenu()">
+    <div class="background-stage" aria-hidden="true">
+        <div class="orb orb--one"></div>
+        <div class="orb orb--two"></div>
+        <div class="orb orb--three"></div>
+        <div class="mesh mesh--a"></div>
+        <div class="mesh mesh--b"></div>
+        <div class="signal signal--a"></div>
+        <div class="signal signal--b"></div>
+    </div>
+
+    <header class="site-header">
+        <a class="site-header__brand" href="#inicio" aria-label="Ir al inicio">DEMC</a>
+
+        <button id="hamburger-btn">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-        <nav class="menuMobile">
-            <ul class="menu">
-                <li><a href="#About">Sobre MI</a></li>
-                <li><a href="#Projects">Proyectos</a></li>
-                <li><a href="#Contact">Contacto</a></li>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+            <ul class="site-nav__list">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
                 <li><a href="./pets.html">Mascotas</a></li>
             </ul>
         </nav>
     </header>
-    <section class="main-section">
-        <div class="main-section--info">
-            <div class="availability-tag"><span>Disponible</span></div>
-            <h1>Hello,<br>I'm <span>Daniel Mendoza</span><br></h1>
-            <p>Systems Engineer</p>
-            <p></p>
-        </div>
-    </section>
-    <section id="About" class="AboutMe">
-        <span>Sobre mi</span>
-        <h2>"La tecnología debe estar al servicio <br> de algo más importante que ella misma"</h2>
-        <div class="AboutMe-info">
-            <article class="description">
-                <p>Soy ingeniero de sistemas enfocado en el desarrollo de software y la creación de soluciones
-                    tecnológicas
-                    con impacto. Actualmente fortalezco mis competencias en arquitectura, construcción e implementación
-                    de
-                    software a través de mi formación en RIWI.
 
-                    Mi principal interés es aplicar la tecnología en el sector salud, con el objetivo de especializarme
-                    en
-                    ingeniería biomédica y contribuir al desarrollo de soluciones que mejoren la calidad de vida de las
-                    personas.</p>
+    <main id="inicio">
+        <section class="hero">
+            <div class="hero__content">
+                <div class="availability-badge">
+                    <span>Disponible</span>
+                </div>
+                <h1>Hola,<br>soy <span>Daniel Mendoza</span></h1>
+                <p>Ingeniero de Sistemas /<br>Desarrollador de Software</p>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="about">
+            <article class="about__info">
+                <span class="section-kicker">Sobre mí</span>
+                <h2>
+                    Construyo software con la convicción de que la tecnología debe servir a algo
+                    más importante que ella misma.
+                </h2>
+                <p>
+                    Soy ingeniero de sistemas enfocado en el desarrollo de software y en la
+                    creación de soluciones tecnológicas con impacto real. Actualmente fortalezco
+                    mis competencias en arquitectura, construcción e implementación de software a
+                    través de mi formación en RIWI.
+                </p>
+                <p>
+                    Mi principal interés está en aplicar la tecnología al sector salud, con la
+                    meta de especializarme en ingeniería biomédica y contribuir al desarrollo de
+                    soluciones que mejoren la calidad de vida de las personas.
+                </p>
             </article>
-        </div>
-    </section>
-    <section id="Projects" class="Projects">
-        <span>Portafolio</span>
-        <h2>Lo que he construido</h2>
-        <p>Una selección de proyectos que muestran mi proceso creativo y habilidades técnicas.</p>
-        <div class="grid" id="Projects-container"></div>
-    </section>
-    <section class="Contact" id="Contact">
-        <div class="Contact-tl">
-            <span>contacto</span>
-            <h2>Construyamos algo limpio, útil y bien hecho.</h2>
-        </div>
-        <div class="glass-card">
-            <form class="form-grid" action="">
-                <div class="field">
-                    <label>Name</label>
-                    <input type="text" placeholder="Daniel" />
-                </div>
-                <div class="field">
-                    <label>Last name</label>
-                    <input type="text" placeholder="Mendoza" />
-                </div>
-                <div class="field">
-                    <label>Email</label>
-                    <input type="email" placeholder="dm@email.com" />
-                </div>
-                <div class="field">
-                    <label>Phone</label>
-                    <input type="tel" placeholder="+57 300 000 0000" />
-                </div>
-                <div class="field full">
-                    <label>Message</label>
-                    <textarea placeholder="Escribe tu mensaje..."></textarea>
-                </div>
-                <div class="form-actions full">
-                    <button type="submit" class="btn-reserve">Enviar Mensaje</button>
-                </div>
-            </form>
-        </div>
-    </section>
-    <script src="./cards-ptf.js"></script>
-    <script src="./showMenu.js"></script>
+
+            <article class="about__vision">
+                <span class="section-kicker">Visión</span>
+                <h2>
+                    Quiero construir tecnología que no solo funcione bien, sino que también genere
+                    un impacto positivo.
+                </h2>
+            </article>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <span class="section-kicker">Portafolio</span>
+            <h2>Lo que he construido</h2>
+            <p>
+                Una selección de proyectos que muestran mi proceso creativo y habilidades técnicas.
+            </p>
+            <div class="projects__grid" id="projects-container"></div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="contact__intro">
+                <span class="section-kicker">Contacto</span>
+                <h2>Construyamos algo limpio, útil y bien hecho.</h2>
+            </div>
+
+            <div class="contact-card">
+                <form class="contact-form" action="">
+                    <div class="contact-form__field">
+                        <label for="first-name">Nombre</label>
+                        <input id="first-name" type="text" placeholder="Daniel">
+                    </div>
+
+                    <div class="contact-form__field">
+                        <label for="last-name">Apellido</label>
+                        <input id="last-name" type="text" placeholder="Mendoza">
+                    </div>
+
+                    <div class="contact-form__field">
+                        <label for="email">Correo</label>
+                        <input id="email" type="email" placeholder="dm@email.com">
+                    </div>
+
+                    <div class="contact-form__field">
+                        <label for="phone">Celular</label>
+                        <input id="phone" type="tel" placeholder="+57 300 000 0000">
+                    </div>
+
+                    <div class="contact-form__field contact-form__field--full">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" placeholder="Escribe tu mensaje..."></textarea>
+                    </div>
+
+                    <div class="contact-form__actions contact-form__field--full">
+                        <button type="submit" class="button button--primary">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
 </body>
 
 </html>
